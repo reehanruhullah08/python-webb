@@ -1,0 +1,11 @@
+{
+    "auths": {
+      "docker.example.com": {
+        "username": "reehanruhullah",
+        "password": "Seeusoon@1",
+        "email": "reehanruhullah8@gmail.com",
+        "auth": "base64-encoded-credentials"
+      }
+    }
+  }
+  
