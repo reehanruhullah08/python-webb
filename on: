@@ -1,0 +1,25 @@
+on:
+	push:
+		branches: [master]
+
+    
+
+jobs:
+    build:
+        runs-on: 
+          - self-hosted
+          - ubut
+        steps:
+          
+            - uses: actions/checkout@v4
+
+            - name: Log in to Docker Hub
+              run: |
+                echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+                docker image build -t reehanruhullah/dataphion_prac:abc .
+                docker push reehanruhullah/dataphion_prac:abc
+    
+          
+                
+
+           
